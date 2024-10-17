@@ -13,7 +13,7 @@
 #include <unistd.h>
 #endif
 
-#define RELEASE "1.07"
+#define RELEASE "1.07 PRK Edition"
 
 using namespace std;
 bool should_exit = false;
@@ -498,15 +498,15 @@ int main(int argc, char** argv)
 //	printf("SEARCH MODE  : %s\n", searchMode == (int)SEARCH_MODE_MA ? "Multi Address" : (searchMode == (int)SEARCH_MODE_SA ? "Single Address" : (searchMode == (int)SEARCH_MODE_MX ? "Multi X Points" : "Single X Point")));
 //	printf("DEVICE       : %s\n", (gpuEnable && nbCPUThread > 0) ? "CPU & GPU" : ((!gpuEnable && nbCPUThread > 0) ? "CPU" : "GPU"));
 //	printf("CPU THREAD   : %d\n", nbCPUThread);
-	if (gpuEnable) {
-//		printf("GPU IDS      : ");
+//	if (gpuEnable) {
+		printf("GPU IDS      : ");
 		for (int i = 0; i < gpuId.size(); i++) {
 			printf("%d", gpuId.at(i));
 			if (i + 1 < gpuId.size())
 				printf(", ");
 		}
 		printf("\n");
-//		printf("GPU GRIDSIZE : ");
+		printf("GPU GRIDSIZE : ");
 		for (int i = 0; i < gridSize.size(); i++) {
 			printf("%d", gridSize.at(i));
 			if (i + 1 < gridSize.size()) {
