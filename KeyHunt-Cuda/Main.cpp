@@ -491,7 +491,6 @@ int main(int argc, char** argv)
 
 	printf("\n");
 	printf("KeyHunt-Cuda v" RELEASE "\n");
-	printf("\n");
 	if (coinType == COIN_BTC)
 //		printf("COMP MODE    : %s\n", compMode == SEARCH_COMPRESSED ? "COMPRESSED" : (compMode == SEARCH_UNCOMPRESSED ? "UNCOMPRESSED" : "COMPRESSED & UNCOMPRESSED"));
 //	printf("COIN TYPE    : %s\n", coinType == COIN_BTC ? "BITCOIN" : "ETHEREUM");
@@ -511,7 +510,7 @@ int main(int argc, char** argv)
 //			printf("%d", gridSize.at(i));
 			if (i + 1 < gridSize.size()) {
 				if ((i + 1) % 2 != 0) {
-					printf("x");
+//					printf("x");
 				}
 				else {
 					printf(", ");
@@ -532,9 +531,9 @@ int main(int argc, char** argv)
 		case (int)SEARCH_MODE_MA:
 			printf("BTC HASH160s : %s\n", inputFile.c_str());
 			break;
-		case (int)SEARCH_MODE_SA:
-			printf("BTC ADDRESS  : %s\n", address.c_str());
-			break;
+//		case (int)SEARCH_MODE_SA:
+//			printf("BTC ADDRESS  : %s\n", address.c_str());
+//			break;
 		case (int)SEARCH_MODE_MX:
 			printf("BTC XPOINTS  : %s\n", inputFile.c_str());
 			break;
