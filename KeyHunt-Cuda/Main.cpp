@@ -556,7 +556,7 @@ int main(int argc, char** argv)
 			break;
 		}
 	}
-	printf("OUTPUT FILE  : %s", outputFile.c_str());
+//	printf("OUTPUT FILE  : %s", outputFile.c_str());
 	
 #ifdef WIN64
 	if (SetConsoleCtrlHandler(CtrlHandler, TRUE)) {
