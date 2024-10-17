@@ -493,20 +493,20 @@ int main(int argc, char** argv)
 	printf("KeyHunt-Cuda v" RELEASE "\n");
 	printf("\n");
 	if (coinType == COIN_BTC)
-#		printf("COMP MODE    : %s\n", compMode == SEARCH_COMPRESSED ? "COMPRESSED" : (compMode == SEARCH_UNCOMPRESSED ? "UNCOMPRESSED" : "COMPRESSED & UNCOMPRESSED"));
-#	printf("COIN TYPE    : %s\n", coinType == COIN_BTC ? "BITCOIN" : "ETHEREUM");
-#	printf("SEARCH MODE  : %s\n", searchMode == (int)SEARCH_MODE_MA ? "Multi Address" : (searchMode == (int)SEARCH_MODE_SA ? "Single Address" : (searchMode == (int)SEARCH_MODE_MX ? "Multi X Points" : "Single X Point")));
-#	printf("DEVICE       : %s\n", (gpuEnable && nbCPUThread > 0) ? "CPU & GPU" : ((!gpuEnable && nbCPUThread > 0) ? "CPU" : "GPU"));
-#	printf("CPU THREAD   : %d\n", nbCPUThread);
+//		printf("COMP MODE    : %s\n", compMode == SEARCH_COMPRESSED ? "COMPRESSED" : (compMode == SEARCH_UNCOMPRESSED ? "UNCOMPRESSED" : "COMPRESSED & UNCOMPRESSED"));
+//	printf("COIN TYPE    : %s\n", coinType == COIN_BTC ? "BITCOIN" : "ETHEREUM");
+//	printf("SEARCH MODE  : %s\n", searchMode == (int)SEARCH_MODE_MA ? "Multi Address" : (searchMode == (int)SEARCH_MODE_SA ? "Single Address" : (searchMode == (int)SEARCH_MODE_MX ? "Multi X Points" : "Single X Point")));
+//	printf("DEVICE       : %s\n", (gpuEnable && nbCPUThread > 0) ? "CPU & GPU" : ((!gpuEnable && nbCPUThread > 0) ? "CPU" : "GPU"));
+//	printf("CPU THREAD   : %d\n", nbCPUThread);
 	if (gpuEnable) {
-#		printf("GPU IDS      : ");
+//		printf("GPU IDS      : ");
 		for (int i = 0; i < gpuId.size(); i++) {
 			printf("%d", gpuId.at(i));
 			if (i + 1 < gpuId.size())
 				printf(", ");
 		}
 		printf("\n");
-#		printf("GPU GRIDSIZE : ");
+//		printf("GPU GRIDSIZE : ");
 		for (int i = 0; i < gridSize.size(); i++) {
 			printf("%d", gridSize.at(i));
 			if (i + 1 < gridSize.size()) {
@@ -524,9 +524,9 @@ int main(int argc, char** argv)
 		else
 			printf("\n");
 	}
-#	printf("SSE          : %s\n", useSSE ? "YES" : "NO");
-#	printf("RKEY         : %llu Mkeys\n", rKey);
-#	printf("MAX FOUND    : %d\n", maxFound);
+//	printf("SSE          : %s\n", useSSE ? "YES" : "NO");
+//	printf("RKEY         : %llu Mkeys\n", rKey);
+//	printf("MAX FOUND    : %d\n", maxFound);
 	if (coinType == COIN_BTC) {
 		switch (searchMode) {
 		case (int)SEARCH_MODE_MA:
