@@ -520,7 +520,7 @@ int main(int argc, char** argv)
 			}
 		}
 		if (gpuAutoGrid)
-//			printf(" (Auto grid size)\n");
+			printf(" (Auto grid size)\n");
 		else
 			printf("\n");
 	}
