@@ -291,7 +291,7 @@ int main(int argc, char** argv)
 #ifdef WIN64
 				GPUEngine::PrintCudaInfo();
 #else
-				printf("GPU code not compiled, use -DWITHGPU when compiling.\n");
+				printf("List function disabled in this version.\n");
 #endif
 				return 0;
 			}
