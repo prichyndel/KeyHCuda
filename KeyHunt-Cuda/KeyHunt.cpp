@@ -1220,7 +1220,8 @@ void KeyHunt::Search(int nbThread, std::vector<int> gpuId, std::vector<int> grid
 
 		if (isAlive(params)) {
 			memset(timeStr, '\0', 256);
-			printf("\r[%s] [CPU+GPU: %.2f Mk/s] [GPU: %.2f Mk/s] [C: %lf %%] [R: %lu] [T: %s (%d bit)] [F: %d] [ID: (ID: %d] ",
+			
+			printf("\r[%s] [CPU+GPU: %.2f Mk/s] [GPU: %.2f Mk/s] [C: %lf %%] [R: %lu] [T: %s (%d bit)] [F: %d]",
 				toTimeStr(t1, timeStr),
 				avgKeyRate / 1000000.0,
 				avgGpuKeyRate / 1000000.0,
@@ -1228,8 +1229,7 @@ void KeyHunt::Search(int nbThread, std::vector<int> gpuId, std::vector<int> grid
 				rKeyCount,
 				formatThousands(count).c_str(),
 				completedBits,
-				nbFoundKey,
-				gpuId.at(i));
+				nbFoundKey);
 		}
 		if (rKey > 0) {
 			if ((count - lastrKey) > (1000000 * rKey)) {
