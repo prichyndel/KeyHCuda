@@ -999,7 +999,7 @@ void KeyHunt::FindKeyGPU(TH_PARAM * ph)
 
 #else
 	ph->hasStarted = true;
-	printf("GPU code not compiled, use -DWITHGPU when compiling.\n");
+	printf("GPU info not writen yet don't panic.. its ok...\n");
 #endif
 
 	ph->isRunning = false;
@@ -1220,7 +1220,7 @@ void KeyHunt::Search(int nbThread, std::vector<int> gpuId, std::vector<int> grid
 
 		if (isAlive(params)) {
 			memset(timeStr, '\0', 256);
-			printf("\r[%s] [CPU+GPU: %.2f Mk/s] [GPU: %.2f Mk/s] [C: %lf %%] [R: %lu] [T: %s (%d bit)] [F: %d]  ",
+			printf("\r[%s] [CPU+GPU: %.2f Mk/s] [GPU: %.2f Mk/s] [C: %lf %%] [R: %lu] [T: %s (%d bit)] [F: %d] [ID: (%d", gpuId.at(i))] ",
 				toTimeStr(t1, timeStr),
 				avgKeyRate / 1000000.0,
 				avgGpuKeyRate / 1000000.0,
